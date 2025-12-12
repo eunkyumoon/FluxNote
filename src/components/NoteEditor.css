@@ -1,0 +1,125 @@
+.note-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.note-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.note-editor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.note-editor-date {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-delete:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+}
+
+.btn-delete:active {
+  transform: translateY(0);
+}
+
+.note-editor-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.note-editor-title {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.note-editor-title:focus {
+  border-bottom-color: #667eea;
+}
+
+.note-editor-content {
+  flex: 1;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  overflow-y: auto;
+}
+
+.note-editor-content::placeholder {
+  color: #ccc;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .note-editor-header {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .note-editor-body {
+    padding: 1rem;
+  }
+
+  .note-editor-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-editor-header {
+    padding: 0.5rem;
+  }
+
+  .note-editor-body {
+    padding: 0.75rem;
+  }
+
+  .note-editor-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .note-editor-content {
+    font-size: 0.9rem;
+  }
+}
+
