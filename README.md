@@ -77,3 +77,5 @@ FluxNote/
 - Safari (최신 버전)
 - Edge (최신 버전)
 
+- #변경사항 적용
+
