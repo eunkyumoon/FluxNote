@@ -8,7 +8,7 @@ const NoteEditor = ({ note, onUpdateNote, onDeleteNote }) => {
   useEffect(() => {
     setTitle(note.title || '');
     setContent(note.content || '');
-  }, [note.id]);
+  }, [note.id, note.title, note.content]);
 
   const handleTitleChange = (e) => {
     const newTitle = e.target.value;
